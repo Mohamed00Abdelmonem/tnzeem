@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+}
+
+
+
+/* تأثير التكبير والظل عند الضغط */
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.hover-scale:hover {
+  transform: scale(1.05); /* تكبير الكارت */
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+}
+
+
+/* تأثير التكبير والظل عند الضغط */
+.hover-scale {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05); /* تكبير الكارت */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+}
+
+/* تحسين تصميم الكارت */
+.card {
+  border-radius: 10px; /* زوايا مدورة */
+  overflow: hidden; /* لمنع تجاوز المحتوى */
+}
+
+.card-body {
+  padding: 2rem; /* زيادة المساحة الداخلية */
+}
+
+/* تحسين تصميم الزر */
+.btn-danger {
+  background-color: #dc3545; /* لون الخلفية */
+  border-color: #dc3545; /* لون الحدود */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-danger:hover {
+  background-color: #bb2d3b; /* لون الخلفية عند الضغط */
+  border-color: #bb2d3b; /* لون الحدود عند الضغط */
+}
+
+
+
+/* تحسين تصميم الكارت */
+.card {
+  border-radius: 10px; /* زوايا مدورة */
+  overflow: hidden; /* لمنع تجاوز المحتوى */
+}
+
+.card-body {
+  padding: 2rem; /* زيادة المساحة الداخلية */
+}
+
+
+.navbar-nav {
+  margin-right: auto;
+  
+}
+.bg-dark-red {
+  background-color: #9e0505; /* Dark red color */
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #1b1a1a !important;
+}
+
+.btn-danger {
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  background-color:rgb(187, 3, 21) !important
+}
