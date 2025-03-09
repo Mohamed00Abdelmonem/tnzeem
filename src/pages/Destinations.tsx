@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Destinations() {
+  const navigate = useNavigate();
+
   const destinations = [
     { id: 1, name: 'اندونيسيا', image: 'https://images.unsplash.com/photo-1558005530-a7958896ec60?w=400&h=300&fit=crop' },
     { id: 2, name: 'أذربيجان', image: 'https://images.unsplash.com/photo-1593085260707-5377ba37f868?w=400&h=300&fit=crop' },
@@ -15,6 +18,10 @@ function Destinations() {
     { id: 11, name: 'سريلانكا', image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=400&h=300&fit=crop' },
     { id: 12, name: 'النمسا', image: 'https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=400&h=300&fit=crop' },
   ];
+
+  const handleShowDetails = (id) => {
+    navigate(`/destinations/${id}`); // Navigate to the detail page
+  };
 
   return (
     <div className="container py-5">
@@ -31,7 +38,12 @@ function Destinations() {
               />
               <div className="card-body text-center">
                 <h5 className="card-title">{destination.name}</h5>
-                <button className="btn btn-outline-danger">عرض التفاصيل</button>
+                <button 
+                  className="btn btn-outline-danger"
+                  onClick={() => handleShowDetails(destination.id)} // Add onClick handler
+                >
+                  عرض التفاصيل
+                </button>
               </div>
             </div>
           </div>
