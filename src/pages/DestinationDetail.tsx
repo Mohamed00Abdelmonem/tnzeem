@@ -1,5 +1,4 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 const destinations = [
   { 
@@ -20,7 +19,7 @@ const destinations = [
     image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=400&h=300&fit=crop', 
     description: 'إذا كنت تبحث عن وجهة سياحية تجمع بين الجمال الطبيعي والتاريخ العريق، فإن جورجيا هي الخيار الأمثل! تتميز البلاد بمناظرها الخلابة، حيث تمتد جبال القوقاز المغطاة بالثلوج، والوديان الخضراء، والأنهار المتدفقة، مما يجعلها وجهة مثالية لعشاق الطبيعة والمغامرات. بالإضافة إلى ذلك، تمتلك جورجيا إرثًا ثقافيًا غنيًا ينعكس في معالمها التاريخية الفريدة، مثل الكنائس القديمة، والقلاع الأثرية، والشوارع العتيقة التي تحكي قصص الماضي بأسلوب ساحر. ولا تكتمل الرحلة دون الاستمتاع بالتجربة الجورجية الأصيلة، حيث تمتزج المأكولات الشهية، والعروض الفلكلورية، والضيافة الجورجية الدافئة التي تجعل كل زائر يشعر وكأنه في بيته.',
     packages: [
-      { name: 'عرض الـ VIP', trips: 6, price: 2700 },
+      { name: 'VIP العرض', trips: 6, price: 2700 },
       { name: 'العرض الاقتصادي', trips: 11, price: 1950 },
       { name: 'عرض شهر العسل', trips: 9, price: 2350 }
     ],
@@ -41,27 +40,39 @@ function DestinationDetail() {
     <div className="container py-5">
       <h1 className="text-center mb-5">{destination.name}</h1>
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-4">
           <img 
             src={destination.image} 
             alt={destination.name} 
             className="img-fluid"
           />
         </div>
-        <div className="col-md-6">
+        <div className="col-md-8">
           <p>{destination.description}</p>
 
           {/* Display packages if available */}
           {destination.packages && (
             <div className="mt-4">
               <h3>العروض السياحية</h3>
-              <ul className="list-group">
+              <div className="row">
                 {destination.packages.map((pkg, index) => (
-                  <li key={index} className="list-group-item">
-                    <strong>{pkg.name}</strong>: {pkg.trips} رحلات - تبدأ من {pkg.price} دولار
-                  </li>
+                  <div key={index} className="col-md-4 mb-4">
+                    <Link 
+                      to={`/destinations/${destination.id}/package/${pkg.name}`} 
+                      className="text-decoration-none"
+                    >
+                      <div className="card h-100 shadow border-0 overflow-hidden hover-scale">
+                        <div className="card-body text-center p-4">
+                          <h5 className="card-title fw-bold text-dark">{pkg.name}</h5>
+                          <p className="card-text text-muted">
+                            {pkg.trips} رحلات - تبدأ من {pkg.price} دولار
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
           )}
 
@@ -79,3 +90,6 @@ function DestinationDetail() {
 }
 
 export default DestinationDetail;
+
+
+
