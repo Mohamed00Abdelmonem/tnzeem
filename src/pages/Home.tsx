@@ -33,10 +33,8 @@ function Home() {
 
   return (
     <>
-      {/* Hero Section */}
       <div className="position-relative">
         
-        {/* Video Section */}
         <video
           className="w-100"
           style={{ height: '600px', objectFit: 'cover' }}

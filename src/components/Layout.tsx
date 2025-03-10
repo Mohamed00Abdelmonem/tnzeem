@@ -31,9 +31,7 @@ function Layout() {
           </a>
         </div>
 
-        {/* Contact Information */}
         <div className="col-md-6 col-lg-4 d-flex flex-column flex-md-row align-items-center gap-3">
-          {/* Phone Number */}
           <div className="d-flex align-items-center">
             <Phone size={20} className="ms-1" />
             <span>920-0332-39</span>
@@ -52,68 +50,66 @@ function Layout() {
   </div>
 
       {/* Navigation */}
-<nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-  <div className="container">
-    {/* Brand Logo */}
-    <Link className="navbar-brand" to="/">
-      <img
-        src="https://tnzeem.com/wp-content/uploads/2025/02/cropped-Grey-01-300x119-1.webp"
-        alt="Logo"
-        height="50"
-        className="d-inline-block align-top"
-      />
-    </Link>
-    
+      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div className="container">
+        {/* Brand Logo */}
+        <Link className="navbar-brand" to="/">
+          <img
+            src="https://tnzeem.com/wp-content/uploads/2025/02/cropped-Grey-01-300x119-1.webp"
+            alt="Logo"
+            height="50"
+            className="d-inline-block align-top"
+          />
+        </Link>
 
-    {/* Toggle Button for Mobile */}
-    <button
-      className="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav" // يجب أن يتطابق مع id العنصر القابل للطي
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span className="navbar-toggler-icon"></span>
-    </button>
+        {/* Toggler Button */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
 
-    {/* Navbar Links */}
-    <div className="collapse navbar-collapse" id="navbarNav"> {/* يجب أن يتطابق مع data-bs-target */}
-      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <Link className="nav-link" to="/">
-            الرئيسية
+        {/* Navbar Links */}
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">
+                الرئيسية
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/magazine">
+                مجلة سياحية
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">
+                تواصل معنا
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
+                من نحن
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/destinations">
+                الوجهات السياحية
+              </Link>
+            </li>
+          </ul>
+          <Link to="/contact" className="btn btn-danger px-4 py-2">
+            طلب الخدمة
           </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/magazine">
-            مجلة سياحية
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/contact">
-            تواصل معنا
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/about">
-            من نحن
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="nav-link" to="/destinations">
-            الوجهات السياحية
-          </Link>
-        </li>
-      </ul>
-      <Link to="/contact" className="btn btn-danger px-4 py-2">
-        طلب الخدمة
-      </Link>
-
-    </div>
-  </div>
-</nav>
+        </div>
+      </div>
+    </nav>
 
       {/* Main Content */}
       <main className="flex-grow-1">
