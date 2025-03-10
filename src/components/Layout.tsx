@@ -107,7 +107,10 @@ function Layout() {
           </Link>
         </li>
       </ul>
-      <button className="btn btn-danger px-4 py-2">طلب الخدمة</button>
+      <Link to="/contact" className="btn btn-danger px-4 py-2">
+        طلب الخدمة
+      </Link>
+
     </div>
   </div>
 </nav>
