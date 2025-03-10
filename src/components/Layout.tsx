@@ -107,10 +107,9 @@ function Layout() {
           </Link>
         </li>
       </ul>
-      <Link to="/contact" className="btn btn-danger px-4 py-2">
+      <Link to="/order" className="btn btn-danger px-4 py-2">
         طلب الخدمة
       </Link>
-
     </div>
   </div>
 </nav>
@@ -120,64 +119,67 @@ function Layout() {
         <Outlet />
       </main>
 
-      {/* Footer */}
-      <footer className="bg-dark text-white py-5 mt-auto">
-        <div className="container">
-          <div className="row">
-            {/* Contact Information */}
-            <div className="col-md-4 mb-4 mb-md-0">
-              <h5 className="mb-3">تواصل معنا</h5>
-              <p className="mb-1">920-0332-39</p>
-              <p className="mb-0">info@altanzeem.com</p>
-            </div>
-
-            {/* Quick Links */}
-            <div className="col-md-4 mb-4 mb-md-0">
-              <h5 className="mb-3">روابط سريعة</h5>
-              <ul className="list-unstyled">
-                <li className="mb-2">
-                  <Link to="/" className="text-white text-decoration-none">
-                    الرئيسية
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link to="/about" className="text-white text-decoration-none">
-                    من نحن
-                  </Link>
-                </li>
-                <li className="mb-0">
-                  <Link to="/contact" className="text-white text-decoration-none">
-                    تواصل معنا
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Social Media Links */}
-            <div className="col-md-4">
-              <h5 className="mb-3">تابعنا على</h5>
-              <div className="d-flex gap-3">
-                <a href="#" className="text-white">
-                  <Facebook size={24} />
-                </a>
-                <a href="#" className="text-white">
-                  <Instagram size={24} />
-                </a>
-                <a href="#" className="text-white">
-                  <Youtube size={24} />
-                </a>
-              </div>
+      <footer className="bg-dark text-white py-4 mt-auto">
+      <div className="container">
+        <div className="row align-items-center">
+          {/* Service Request Form */}
+          <div className="col-md-4 mb-3">
+            <div className="card bg-light text-dark p-3 shadow-sm">
+              <h5 className="text-center mb-3">طلب الخدمة</h5>
+              <form>
+                <div className="mb-2">
+                  <label htmlFor="phone" className="form-label">الجوال *</label>
+                  <div className="input-group">
+                    <select className="form-select" style={{ maxWidth: '100px' }}>
+                      <option value="+20">+20</option>
+                      <option value="+966">+966</option>
+                    </select>
+                    <input type="text" className="form-control" id="phone" placeholder="01234567" />
+                  </div>
+                </div>
+                <div className="mb-2">
+                  <label htmlFor="city" className="form-label">المدينة *</label>
+                  <select className="form-select" id="city">
+                    <option value="">اختيار</option>
+                    <option value="Cairo">القاهرة</option>
+                    <option value="Alexandria">الإسكندرية</option>
+                  </select>
+                </div>
+                <button type="submit" className="btn btn-danger w-100 btn-sm">إرسال</button>
+              </form>
             </div>
           </div>
 
-          {/* Copyright Section */}
-          <div className="row mt-4">
-            <div className="col-12 text-center">
-              <p className="mb-0">&copy; {new Date().getFullYear()} Altanzeem. جميع الحقوق محفوظة.</p>
+          {/* Quick Links */}
+          <div className="col-md-4 mb-3 text-center">
+            <h6 className="mb-2">روابط سريعة</h6>
+            <ul className="list-unstyled">
+              <li><Link to="/" className="text-white">الرئيسية</Link></li>
+              <li><Link to="/about" className="text-white">من نحن</Link></li>
+              <li><Link to="/contact" className="text-white">تواصل معنا</Link></li>
+            </ul>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="col-md-4 text-center">
+            <h6 className="mb-2">تابعنا</h6>
+            <div className="d-flex justify-content-center gap-2">
+              <a href="#" className="text-white"><Facebook size={20} /></a>
+              <a href="#" className="text-white"><Instagram size={20} /></a>
+              <a href="#" className="text-white"><Youtube size={20} /></a>
             </div>
           </div>
         </div>
-      </footer>
+
+        {/* Copyright Section */}
+        <div className="row mt-3">
+          <div className="col-12 text-center">
+            <p className="mb-0 small">&copy; {new Date().getFullYear()} Altanzeem. جميع الحقوق محفوظة.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
     </div>
   );
 }

@@ -7,7 +7,8 @@ import Contact from './pages/Contact';
 import TravelMagazine from './pages/TravelMagazine';
 import Destinations from './pages/Destinations';
 import DestinationDetail from './pages/DestinationDetail';
-import PackageDetail from './pages/PackageDetail'; // Import the PackageDetail component
+import PackageDetail from './pages/PackageDetail';
+import Order from './pages/Order'; // Import the new Order component
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path="magazine" element={<TravelMagazine />} />
           <Route path="destinations" element={<Destinations />} />
           <Route path="destinations/:id" element={<DestinationDetail />} />
-          <Route path="destinations/:destinationId/package/:packageName" element={<PackageDetail />} /> {/* Add this route */}
+          <Route path="destinations/:destinationId/package/:packageName" element={<PackageDetail />} />
+          <Route path="order" element={<Order />} /> {/* Add the new route for Order */}
         </Route>
       </Routes>
     </Router>
