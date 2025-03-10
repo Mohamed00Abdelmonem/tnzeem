@@ -55,7 +55,9 @@ function Home() {
           <p className="lead mb-4">
             نقدم العديد من المزايا والخدمات التي تجعل السفر أكثر راحة وسهولة للعملاء
           </p>
-          <button className="btn btn-danger btn-lg">طلب الخدمة</button>
+          <Link to="/contact" className="btn btn-danger btn-lg">
+            طلب الخدمة
+          </Link>
         </div>
       </div>
 
