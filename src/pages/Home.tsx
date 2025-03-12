@@ -37,7 +37,8 @@ function Home() {
       <div className="position-relative">
         
         {/* Video Section */}
-        <video
+        
+        {/* <video
           className="w-100"
           style={{ height: '600px', objectFit: 'cover' }}
           autoPlay
@@ -46,7 +47,18 @@ function Home() {
         >
           <source src="https://www.pexels.com/download/video/3135808/" type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
+
+
+        <img
+          className="w-100"
+          style={{ height: '600px', objectFit: 'cover' }}
+          src="src/public/mm.gif"
+          alt="Animated GIF"
+        />
+
+
+
 
         {/* Overlay Text */}
         <div className="position-absolute top-50 start-50 translate-middle text-center text-white">

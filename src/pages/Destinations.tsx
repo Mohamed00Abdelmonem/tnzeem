@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Destinations() {
@@ -10,7 +9,7 @@ function Destinations() {
     { id: 3, name: 'جورجيا', image: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=400&h=300&fit=crop' },
     { id: 4, name: 'تايلند', image: 'https://images.unsplash.com/photo-1528181304800-259b08848526?w=400&h=300&fit=crop' },
     { id: 5, name: 'تركيا', image: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=400&h=300&fit=crop' },
-    { id: 6, name: 'البوسنة', image: 'https://images.unsplash.com/photo-1555990538-17392d5e5de4?w=400&h=300&fit=crop' },
+    { id: 6, name: 'البوسنة', image: 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=400&h=300&fit=crop' },
     { id: 7, name: 'دبي', image: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop' },
     { id: 8, name: 'المالديف', image: 'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=400&h=300&fit=crop' },
     { id: 9, name: 'موريشيوس', image: 'https://images.unsplash.com/photo-1548574505-5e239809ee19?w=400&h=300&fit=crop' },

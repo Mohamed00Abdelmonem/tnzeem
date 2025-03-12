@@ -1,6 +1,8 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Youtube, Instagram, BookText as TikTok, Snail as Snapchat } from 'lucide-react';
+import OrderForm from '../components/OrderForm';
+
 
 function Layout() {
   return (
@@ -119,36 +121,36 @@ function Layout() {
         <Outlet />
       </main>
 
+
+
+
+
+
+
+
+
+
+
       <footer className="bg-dark text-white py-4 mt-auto">
       <div className="container">
         <div className="row align-items-center">
           {/* Service Request Form */}
-          <div className="col-md-4 mb-3">
-            <div className="card bg-light text-dark p-3 shadow-sm">
-              <h5 className="text-center mb-3">طلب الخدمة</h5>
-              <form>
-                <div className="mb-2">
-                  <label htmlFor="phone" className="form-label">الجوال *</label>
-                  <div className="input-group">
-                    <select className="form-select" style={{ maxWidth: '100px' }}>
-                      <option value="+20">+20</option>
-                      <option value="+966">+966</option>
-                    </select>
-                    <input type="text" className="form-control" id="phone" placeholder="01234567" />
-                  </div>
-                </div>
-                <div className="mb-2">
-                  <label htmlFor="city" className="form-label">المدينة *</label>
-                  <select className="form-select" id="city">
-                    <option value="">اختيار</option>
-                    <option value="Cairo">القاهرة</option>
-                    <option value="Alexandria">الإسكندرية</option>
-                  </select>
-                </div>
-                <button type="submit" className="btn btn-danger w-100 btn-sm">إرسال</button>
-              </form>
-            </div>
-          </div>
+          
+
+        <div 
+          style={{ 
+            maxWidth: '600px',
+            height: '40px', // Added missing comma here
+            margin: '0 auto', 
+            padding: '20px', 
+            border: '1px solid #ccc', 
+            borderRadius: '8px', 
+            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', 
+            backgroundColor: '#f9f9f9' 
+          }}
+        >
+          <OrderForm /> {/* Use the OrderForm component here */}
+      </div>
 
           {/* Quick Links */}
           <div className="col-md-4 mb-3 text-center">
