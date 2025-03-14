@@ -129,59 +129,49 @@ function Layout() {
 
 
 
-
-
-      <footer className="bg-dark text-white py-4 mt-auto">
-      <div className="container">
-        <div className="row align-items-center">
-          {/* Service Request Form */}
-          
-
+<footer className="bg-dark text-white py-4 mt-auto">
+  <div className="container">
+    <div className="row align-items-center">
+      {/* Service Request Form */}
+      <div className="col-lg-6 col-md-12 col-sm-4 text-center">
         <div 
           style={{ 
             maxWidth: '600px',
-            height: '40px', // Added missing comma here
-            margin: '0 auto', 
-            padding: '20px', 
-            border: '1px solid #ccc', 
-            borderRadius: '8px', 
-            boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', 
-            backgroundColor: '#f9f9f9' 
+            boxShadow: '0 1px 1px rgba(0, 0, 0, 0.1)', 
           }}
         >
           <OrderForm /> {/* Use the OrderForm component here */}
-      </div>
-
-          {/* Quick Links */}
-          <div className="col-md-4 mb-3 text-center">
-            <h6 className="mb-2">روابط سريعة</h6>
-            <ul className="list-unstyled">
-              <li><Link to="/" className="text-white">الرئيسية</Link></li>
-              <li><Link to="/about" className="text-white">من نحن</Link></li>
-              <li><Link to="/contact" className="text-white">تواصل معنا</Link></li>
-            </ul>
-          </div>
-
-          {/* Social Media Links */}
-          <div className="col-md-4 text-center">
-            <h6 className="mb-2">تابعنا</h6>
-            <div className="d-flex justify-content-center gap-2">
-              <a href="#" className="text-white"><Facebook size={20} /></a>
-              <a href="#" className="text-white"><Instagram size={20} /></a>
-              <a href="#" className="text-white"><Youtube size={20} /></a>
-            </div>
-          </div>
-        </div>
-
-        {/* Copyright Section */}
-        <div className="row mt-3">
-          <div className="col-12 text-center">
-            <p className="mb-0 small">&copy; {new Date().getFullYear()} Altanzeem. جميع الحقوق محفوظة.</p>
-          </div>
         </div>
       </div>
-    </footer>
-    
+
+      {/* Quick Links */}
+      <div className="col-lg-3 col-md-6 col-sm-4 text-center">        <h6 className="mb-2">روابط سريعة</h6>
+        <ul className="list-unstyled">
+          <li><Link to="/" className="text-white">الرئيسية</Link></li>
+          <li><Link to="/about" className="text-white">من نحن</Link></li>
+          <li><Link to="/contact" className="text-white">تواصل معنا</Link></li>
+        </ul>
+      </div>
+
+      {/* Social Media Links */}
+      <div className="col-lg-3 col-md-6 col-sm-4 text-center">
+                <h6 className="mb-2">تابعنا</h6>
+        <div className="d-flex justify-content-center gap-2">
+          <a href="#" className="text-white"><Facebook size={20} /></a>
+          <a href="#" className="text-white"><Instagram size={20} /></a>
+          <a href="#" className="text-white"><Youtube size={20} /></a>
+        </div>
+      </div>
+    </div>
+
+    {/* Copyright Section */}
+    <div className="row mt-3">
+      <div className="col-12 text-center">
+        <p className="mb-0 small">&copy; {new Date().getFullYear()} Altanzeem. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }

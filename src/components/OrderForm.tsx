@@ -40,15 +40,15 @@ function OrderForm() {
                   <label htmlFor="phone" className="form-label">الجوال *</label>
                   <div className="input-group">
                     <select className="form-select" style={{ maxWidth: '120px' }} aria-label="Country Code">
-                      <option value="+20">Egypt +20</option>
-                      <option value="+966">Saudi Arabia +966</option>
+                      {/* <option value="+20">Egypt +20</option> */}
+                      <option value="+966">Saudi </option>
                       {/* Add more country codes here */}
                     </select>
                     <input
                       type="text"
                       className="form-control"
                       id="phone"
-                      placeholder="010 01234567"
+                      placeholder=" 535 52353 966+"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       required
@@ -69,8 +69,8 @@ function OrderForm() {
                     aria-required="true"
                   >
                     <option value="">اختيار المدينة</option>
-                    <option value="Cairo">القاهرة</option>
-                    <option value="Alexandria">الإسكندرية</option>
+                    <option value="Cairo">جده</option>
+                    <option value="Alexandria">المدينه</option>
                     <option value="Riyadh">الرياض</option>
                     {/* Add more cities here */}
                   </select>
@@ -88,8 +88,22 @@ function OrderForm() {
                     aria-required="true"
                   >
                     <option value="">اختيار الدولة</option>
-                    <option value="Egypt">مصر</option>
                     <option value="Saudi Arabia">السعودية</option>
+                    <option value="Georgia">جورجيا</option>
+                    <option value="Azerbaijan">أذربيجان</option>
+                    <option value="Indonesia">أندونيسيا</option>
+                    <option value="Bosnia">البوسنة</option>
+                    <option value="Turkey">تركيا</option>
+                    <option value="Thailand">تايلاند</option>
+                    <option value="Mauritius">موريشيوس</option>
+                    <option value="Maldives">المالديف</option>
+                    <option value="Dubai">دبي</option>
+                    <option value="Albania">البانيا</option>
+                    <option value="Europe">رحلات اوروبا</option>
+                    <option value="Malaysia">ماليزيا</option>
+                    <option value="Salalah">صلالة</option>
+                    <option value="Sri Lanka">سريلانكا</option>
+                    <option value="Russia">روسيا</option>
                     {/* Add more countries here */}
                   </select>
                 </div>

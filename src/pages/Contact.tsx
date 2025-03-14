@@ -6,7 +6,7 @@ function Contact() {
     <div className="container py-5">
       <h1 className="text-center mb-5">تواصل معنا</h1>
       <div className="row">
-        <div className="col-md-6 mb-4">
+        <div className="col-md-6 col-md-8 mb-4">
           <div className="card h-100">
             <div className="card-body">
               <h5 className="card-title mb-4">معلومات الاتصال</h5>
