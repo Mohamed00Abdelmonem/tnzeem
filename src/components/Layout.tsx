@@ -1,6 +1,8 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Youtube, Instagram, BookText as TikTok, Snail as Snapchat } from 'lucide-react';
+import OrderForm from '../components/OrderForm';
+
 
 function Layout() {
   return (
@@ -75,105 +77,99 @@ function Layout() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navbar Links */}
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">
-                الرئيسية
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/magazine">
-                مجلة سياحية
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">
-                تواصل معنا
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                من نحن
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/destinations">
-                الوجهات السياحية
-              </Link>
-            </li>
-          </ul>
-          <Link to="/contact" className="btn btn-danger px-4 py-2">
-            طلب الخدمة
+    {/* Navbar Links */}
+    <div className="collapse navbar-collapse" id="navbarNav"> {/* يجب أن يتطابق مع data-bs-target */}
+      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <Link className="nav-link" to="/">
+            الرئيسية
           </Link>
-        </div>
-      </div>
-    </nav>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/magazine">
+            مجلة سياحية
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/contact">
+            تواصل معنا
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/about">
+            من نحن
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/destinations">
+            الوجهات السياحية
+          </Link>
+        </li>
+      </ul>
+      <Link to="/contact" className="btn btn-danger px-4 py-2">
+        طلب الخدمة
+      </Link>
+
+    </div>
+  </div>
+</nav>
 
       {/* Main Content */}
       <main className="flex-grow-1">
         <Outlet />
       </main>
 
-      {/* Footer */}
-      <footer className="bg-dark text-white py-5 mt-auto">
-        <div className="container">
-          <div className="row">
-            {/* Contact Information */}
-            <div className="col-md-4 mb-4 mb-md-0">
-              <h5 className="mb-3">تواصل معنا</h5>
-              <p className="mb-1">920-0332-39</p>
-              <p className="mb-0">info@altanzeem.com</p>
-            </div>
 
-            {/* Quick Links */}
-            <div className="col-md-4 mb-4 mb-md-0">
-              <h5 className="mb-3">روابط سريعة</h5>
-              <ul className="list-unstyled">
-                <li className="mb-2">
-                  <Link to="/" className="text-white text-decoration-none">
-                    الرئيسية
-                  </Link>
-                </li>
-                <li className="mb-2">
-                  <Link to="/about" className="text-white text-decoration-none">
-                    من نحن
-                  </Link>
-                </li>
-                <li className="mb-0">
-                  <Link to="/contact" className="text-white text-decoration-none">
-                    تواصل معنا
-                  </Link>
-                </li>
-              </ul>
-            </div>
 
-            {/* Social Media Links */}
-            <div className="col-md-4">
-              <h5 className="mb-3">تابعنا على</h5>
-              <div className="d-flex gap-3">
-                <a href="#" className="text-white">
-                  <Facebook size={24} />
-                </a>
-                <a href="#" className="text-white">
-                  <Instagram size={24} />
-                </a>
-                <a href="#" className="text-white">
-                  <Youtube size={24} />
-                </a>
-              </div>
-            </div>
-          </div>
 
-          {/* Copyright Section */}
-          <div className="row mt-4">
-            <div className="col-12 text-center">
-              <p className="mb-0">&copy; {new Date().getFullYear()} Altanzeem. جميع الحقوق محفوظة.</p>
-            </div>
-          </div>
+
+
+
+
+
+<footer className="bg-dark text-white py-4 mt-auto">
+  <div className="container">
+    <div className="row align-items-center">
+      {/* Service Request Form */}
+      <div className="col-lg-6 col-md-12 col-sm-4 text-center">
+        <div 
+          style={{ 
+            maxWidth: '600px',
+            boxShadow: '0 1px 1px rgba(0, 0, 0, 0.1)', 
+          }}
+        >
+          <OrderForm /> {/* Use the OrderForm component here */}
         </div>
-      </footer>
+      </div>
+
+      {/* Quick Links */}
+      <div className="col-lg-3 col-md-6 col-sm-4 text-center">        <h6 className="mb-2">روابط سريعة</h6>
+        <ul className="list-unstyled">
+          <li><Link to="/" className="text-white">الرئيسية</Link></li>
+          <li><Link to="/about" className="text-white">من نحن</Link></li>
+          <li><Link to="/contact" className="text-white">تواصل معنا</Link></li>
+        </ul>
+      </div>
+
+      {/* Social Media Links */}
+      <div className="col-lg-3 col-md-6 col-sm-4 text-center">
+                <h6 className="mb-2">تابعنا</h6>
+        <div className="d-flex justify-content-center gap-2">
+          <a href="#" className="text-white"><Facebook size={20} /></a>
+          <a href="#" className="text-white"><Instagram size={20} /></a>
+          <a href="#" className="text-white"><Youtube size={20} /></a>
+        </div>
+      </div>
+    </div>
+
+    {/* Copyright Section */}
+    <div className="row mt-3">
+      <div className="col-12 text-center">
+        <p className="mb-0 small">&copy; {new Date().getFullYear()} Altanzeem. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }
