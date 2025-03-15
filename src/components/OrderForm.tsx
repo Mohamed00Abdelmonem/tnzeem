@@ -45,7 +45,7 @@ function OrderForm() {
                       {/* Add more country codes here */}
                     </select>
                     <input
-                      type="text"
+                      type="number"
                       className="form-control"
                       id="phone"
                       placeholder=" 535 52353 966+"
