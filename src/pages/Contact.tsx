@@ -6,11 +6,7 @@ function Contact() {
     <div className="container py-5">
       <h1 className="text-center mb-5">تواصل معنا</h1>
       <div className="row">
-<<<<<<< HEAD
-        <div className="col-md-12 mb-4">
-=======
         <div className="col-md-6 col-md-8 mb-4">
->>>>>>> 921b533580e5c1526d58367480b386891e3278fa
           <div className="card h-100">
             <div className="card-body">
               <h5 className="card-title mb-4">معلومات الاتصال</h5>
@@ -29,12 +25,6 @@ function Contact() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-
-
-        
-=======
->>>>>>> 921b533580e5c1526d58367480b386891e3278fa
       </div>
     </div>
   );
