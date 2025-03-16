@@ -95,6 +95,7 @@ const Home = () => {
       {/* Hero Section */}
       <div className="position-relative">
         {/* Video Section */}
+        
         <video
           className="w-100"
           style={{ height: '600px', objectFit: 'cover' }}
@@ -105,6 +106,17 @@ const Home = () => {
           <source src="https://videos.pexels.com/video-files/18110067/18110067-sd_640_360_30fps.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+
+
+        {/* <img
+          className="w-100"
+          style={{ height: '600px', objectFit: 'cover' }}
+          src="src/public/mm.gif"
+          alt="Animated GIF"
+        /> */}
+
+
+
 
         {/* Overlay Text */}
         <div className="position-absolute top-50 start-50 translate-middle text-center text-white">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // src/pages/Order.tsx
 import React from 'react';
 
@@ -55,8 +56,22 @@ function Order() {
           </form>
         </div>
       </div>
+=======
+// OrderPage.js
+import React from 'react';
+import OrderForm from '../components/OrderForm';
+
+function OrderPage() {
+  return (
+    <div>
+      <OrderForm /> {/* Use the OrderForm component here */}
+>>>>>>> 921b533580e5c1526d58367480b386891e3278fa
     </div>
   );
 }
 
+<<<<<<< HEAD
 export default Order;
+=======
+export default OrderPage;
+>>>>>>> 921b533580e5c1526d58367480b386891e3278fa

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Facebook, Youtube, Instagram, BookText as TikTok, Snail as Snapchat } from 'lucide-react';
+import OrderForm from '../components/OrderForm';
+
 
 function Layout() {
   return (
@@ -77,6 +79,11 @@ function Layout() {
             <span className="navbar-toggler-icon"></span>
           </button>
 
+
+
+          
+
+<<<<<<< HEAD
           {/* Navbar Links */}
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -112,12 +119,50 @@ function Layout() {
           </div>
         </div>
       </nav>
+=======
+    {/* Navbar Links */}
+    <div className="collapse navbar-collapse" id="navbarNav"> {/* يجب أن يتطابق مع data-bs-target */}
+      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <Link className="nav-link" to="/">
+            الرئيسية
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/magazine">
+            مجلة سياحية
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/contact">
+            تواصل معنا
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/about">
+            من نحن
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/destinations">
+            الوجهات السياحية
+          </Link>
+        </li>
+      </ul>
+      <Link to="/order" className="btn btn-danger px-4 py-2">
+        طلب الخدمة
+      </Link>
+    </div>
+  </div>
+</nav>
+>>>>>>> 921b533580e5c1526d58367480b386891e3278fa
 
       {/* Main Content */}
       <main className="flex-grow-1">
         <Outlet />
       </main>
 
+<<<<<<< HEAD
       {/* Footer */}
       <footer className="bg-dark text-white py-5 mt-auto">
         <div className="container">
@@ -215,15 +260,59 @@ function Layout() {
               </div>
             </div>
           </div>
+=======
 
-          {/* Copyright Section */}
-          <div className="row mt-4">
-            <div className="col-12 text-center">
-              <p className="mb-0">&copy; {new Date().getFullYear()} Altanzeem. جميع الحقوق محفوظة.</p>
-            </div>
-          </div>
+
+>>>>>>> 921b533580e5c1526d58367480b386891e3278fa
+
+
+
+
+
+
+<footer className="bg-dark text-white py-4 mt-auto">
+  <div className="container">
+    <div className="row align-items-center">
+      {/* Service Request Form */}
+      <div className="col-lg-6 col-md-12 col-sm-4 text-center">
+        <div 
+          style={{ 
+            maxWidth: '600px',
+            boxShadow: '0 1px 1px rgba(0, 0, 0, 0.1)', 
+          }}
+        >
+          <OrderForm /> {/* Use the OrderForm component here */}
         </div>
-      </footer>
+      </div>
+
+      {/* Quick Links */}
+      <div className="col-lg-3 col-md-6 col-sm-4 text-center">        <h6 className="mb-2">روابط سريعة</h6>
+        <ul className="list-unstyled">
+          <li><Link to="/" className="text-white">الرئيسية</Link></li>
+          <li><Link to="/about" className="text-white">من نحن</Link></li>
+          <li><Link to="/contact" className="text-white">تواصل معنا</Link></li>
+        </ul>
+      </div>
+
+      {/* Social Media Links */}
+      <div className="col-lg-3 col-md-6 col-sm-4 text-center">
+                <h6 className="mb-2">تابعنا</h6>
+        <div className="d-flex justify-content-center gap-2">
+          <a href="#" className="text-white"><Facebook size={20} /></a>
+          <a href="#" className="text-white"><Instagram size={20} /></a>
+          <a href="#" className="text-white"><Youtube size={20} /></a>
+        </div>
+      </div>
+    </div>
+
+    {/* Copyright Section */}
+    <div className="row mt-3">
+      <div className="col-12 text-center">
+        <p className="mb-0 small">&copy; {new Date().getFullYear()} Altanzeem. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </div>
+</footer>
     </div>
   );
 }

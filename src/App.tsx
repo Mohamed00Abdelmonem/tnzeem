@@ -10,6 +10,12 @@ import TravelMagazine from './pages/TravelMagazine';
 import Destinations from './pages/Destinations';
 import DestinationDetail from './pages/DestinationDetail';
 import PackageDetail from './pages/PackageDetail';
+<<<<<<< HEAD
+=======
+import Order from './pages/Order'; // Import the new Order component
+import SuccessPage from './pages/SuccessPage';
+
+>>>>>>> 921b533580e5c1526d58367480b386891e3278fa
 
 function App() {
   return (
@@ -24,6 +30,12 @@ function App() {
           <Route path="destinations" element={<Destinations />} />
           <Route path="destinations/:id" element={<DestinationDetail />} />
           <Route path="destinations/:destinationId/package/:packageName" element={<PackageDetail />} />
+<<<<<<< HEAD
+=======
+          <Route path="order" element={<Order />} /> {/* Add the new route for Order */}
+          <Route path="/success" element={<SuccessPage/>} />
+
+>>>>>>> 921b533580e5c1526d58367480b386891e3278fa
         </Route>
       </Routes>
     </Router>
