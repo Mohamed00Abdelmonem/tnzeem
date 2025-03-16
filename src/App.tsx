@@ -9,6 +9,8 @@ import Destinations from './pages/Destinations';
 import DestinationDetail from './pages/DestinationDetail';
 import PackageDetail from './pages/PackageDetail';
 import Order from './pages/Order'; // Import the new Order component
+import SuccessPage from './pages/SuccessPage';
+
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="destinations/:id" element={<DestinationDetail />} />
           <Route path="destinations/:destinationId/package/:packageName" element={<PackageDetail />} />
           <Route path="order" element={<Order />} /> {/* Add the new route for Order */}
+          <Route path="/success" element={<SuccessPage/>} />
+
         </Route>
       </Routes>
     </Router>

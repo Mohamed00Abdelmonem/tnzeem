@@ -66,8 +66,7 @@ function OrderForm() {
                   <div className="input-group">
                     <input
                       type="text"
-                      className={`form-control ${formik.touched.phone && formik.errors.phone? "is-invalid" : ""}`}
-                      name="phone"
+                      className="form-control"
                       id="phone"
                       placeholder=" 535 52353 966+"
                       value={formik.values.phone}
