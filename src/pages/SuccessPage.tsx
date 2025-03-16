@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> update
 // SuccessPage.js
 import React from 'react';
 
