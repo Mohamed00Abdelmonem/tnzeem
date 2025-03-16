@@ -30,7 +30,7 @@ function OrderForm() {
           city: values.city,
           destination_country: values.destination_country,
         };
-        const response = await axios.post("http://127.0.0.1:8000/crm/create-customer-wordpress/", payload, {
+        const response = await axios.post(`${process.env.REACT_APP_API_ENDPOINT}/crm/create-customer-wordpress/`, payload, {
           headers: {
             "Content-Type": "application/json",
           },
