@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-function Home() {
+const Home = () => {
   const destinations = [
     { id: 1, name: 'اندونيسيا', image: 'https://images.unsplash.com/photo-1558005530-a7958896ec60?w=400&h=300&fit=crop', category: 'شرق آسيا' },
     { id: 2, name: 'أذربيجان', image: 'https://images.unsplash.com/photo-1593085260707-5377ba37f868?w=400&h=300&fit=crop', category: 'أوروبا' },
@@ -31,10 +34,65 @@ function Home() {
     return destination.category === filter;
   });
 
+  // إعدادات السلايدر
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
+  };
+
+  // بيانات آراء العملاء
+  const testimonials = [
+    {
+      id: 1,
+      name: 'محمد علي',
+      comment: 'تجربة رائعة، الخدمة كانت ممتازة والسعر معقول. أنصح الجميع بالتجربة.',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYG-07Zw6V-fiPw7JpL1Df62GtmT_tbWR7YA&s',
+    },
+    {
+      id: 2,
+      name: 'فاطمة أحمد',
+      comment: 'رحلة لا تنسى، كل التفاصيل كانت منظمة بشكل ممتاز. شكرًا لكم!',
+      image: 'https://wallpapers.com/images/hd/generic-male-avatar-icon-piiktqtfffyzulft.jpg',
+    },
+    {
+      id: 3,
+      name: 'خالد سعيد',
+      comment: 'أفضل وكالة سفر تعاملت معها، الخدمة سريعة والموظفون محترفون.',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYG-07Zw6V-fiPw7JpL1Df62GtmT_tbWR7YA&s',
+    },
+    {
+      id: 4,
+      name: 'ليلى محمد',
+      comment: 'رحلة ممتعة ومريحة، كل شيء كان على أعلى مستوى. شكرًا جزيلاً.',
+      image: 'https://wallpapers.com/images/hd/generic-male-avatar-icon-piiktqtfffyzulft.jpg',
+    },
+  ];
+
   return (
     <>
       <div className="position-relative">
-        
         {/* Video Section */}
         <video
           className="w-100"
@@ -43,7 +101,7 @@ function Home() {
           muted
           loop
         >
-          <source src="https://www.pexels.com/download/video/3135808/" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/18110067/18110067-sd_640_360_30fps.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -152,6 +210,29 @@ function Home() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-5 bg-light">
+        <div className="container">
+          <h2 className="text-center mb-5">آراء العملاء</h2>
+          <Slider {...sliderSettings}>
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="px-3">
+                <div className="card h-100 shadow-sm border-0 text-center p-4">
+                  <img
+                    src={testimonial.image}
+                    className="rounded-circle mx-auto mb-3"
+                    alt={testimonial.name}
+                    style={{ width: '100px', height: '100px', objectFit: 'cover' }}
+                  />
+                  <h5 className="card-title fw-bold text-dark">{testimonial.name}</h5>
+                  <p className="card-text text-muted">{testimonial.comment}</p>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-5">
         <div className="container">
@@ -173,6 +254,6 @@ function Home() {
       </section>
     </>
   );
-}
+};
 
 export default Home;
