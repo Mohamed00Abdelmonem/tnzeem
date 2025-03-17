@@ -106,7 +106,7 @@ function Layout() {
           </Link>
         </li>
       </ul>
-      <Link to="/contact" className="btn btn-danger px-4 py-2">
+      <Link to="/order" className="btn btn-danger px-4 py-2">
         طلب الخدمة
       </Link>
 
